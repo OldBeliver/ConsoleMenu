@@ -7,13 +7,13 @@ namespace ConsoleMenu
     {
         static void Main(string[] args)
         {
-            const string capsLockMenu = "capslock";
-            const string numberLockMenu = "numberlock";
-            const string beepMenu = "beep";
-            const string formatCMenu = "formatc";
-            const string clearMenu = "clear";
-            const string exitMenu = "exit";
-            const string infoMenu = "?";
+            const string CapsLockMenu = "capslock";
+            const string NumberLockMenu = "numberlock";
+            const string BeepMenu = "beep";
+            const string FormatCMenu = "formatc";
+            const string ClearMenu = "clear";
+            const string ExitMenu = "exit";
+            const string InfoMenu = "?";
 
             bool doExit = false;
 
@@ -28,17 +28,17 @@ namespace ConsoleMenu
 
                 switch (userInput)
                 {
-                    case infoMenu:
+                    case InfoMenu:
                         Console.WriteLine($"_______________________________________________________________");
-                        Console.WriteLine($"?\t\tсписок команд");
-                        Console.WriteLine($"capslock\tвключен или отключен режим CAPS LOCK клавиатуры");
-                        Console.WriteLine($"numberlock\tвключен или отключен режим NUM LOCK клавиатуры");
-                        Console.WriteLine($"beep\t\tзвуковой сигнал");
-                        Console.WriteLine($"formatC\t\tформатирование диска С");
-                        Console.WriteLine($"clear\t\tочистить экран");
+                        Console.WriteLine($"{InfoMenu}\t\tсписок команд");
+                        Console.WriteLine($"{CapsLockMenu}\tвключен или отключен режим CAPS LOCK клавиатуры");
+                        Console.WriteLine($"{NumberLockMenu}\tвключен или отключен режим NUM LOCK клавиатуры");
+                        Console.WriteLine($"{BeepMenu}\t\tзвуковой сигнал");
+                        Console.WriteLine($"{FormatCMenu}\t\tформатирование диска С");
+                        Console.WriteLine($"{ClearMenu}\t\tочистить экран");
                         Console.WriteLine($"_______________________________________________________________");
                         break;
-                    case capsLockMenu:
+                    case CapsLockMenu:
                         if (Console.CapsLock)
                         {
                             Console.Write($"CapsLock включен");
@@ -50,7 +50,7 @@ namespace ConsoleMenu
 
                         Console.WriteLine($"\tвремя проверки {timeNow}");
                         break;
-                    case numberLockMenu:
+                    case NumberLockMenu:
                         if (Console.NumberLock)
                         {
                             Console.WriteLine($"Num Lock включен");
@@ -62,7 +62,7 @@ namespace ConsoleMenu
 
                         Console.WriteLine($"\tвремя проверки {timeNow}");
                         break;
-                    case beepMenu:
+                    case BeepMenu:
                         int amount = 3;
 
                         for (int i = 0; i < amount; i++)
@@ -72,13 +72,13 @@ namespace ConsoleMenu
 
                         Console.WriteLine($"Если Вы слышите 3 звуковых сигнала, значит динамик работает");
                         break;
-                    case formatCMenu:
+                    case FormatCMenu:
                         Console.WriteLine($"Если Вы слышите звук жужжания жесткого диска, значит процесс форматирования идет успешно");
                         break;
-                    case clearMenu:
+                    case ClearMenu:
                         Console.Clear();
                         break;
-                    case exitMenu:
+                    case ExitMenu:
                         doExit = true;
                         break;
                     default:
